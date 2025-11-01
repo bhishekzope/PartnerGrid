@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Developer Partner Finder - Design System */
+
+@layer base {
+  :root {
+    /* Base colors - Modern developer theme */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    /* Card styling */
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+
+    /* Popover styling */
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary - GitHub-inspired blue */
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 210 100% 60%;
+
+    /* Secondary - Subtle dark */
+    --secondary: 240 6% 10%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Muted elements */
+    --muted: 240 6% 10%;
+    --muted-foreground: 240 5% 65%;
+
+    /* Accent - Success green */
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and inputs */
+    --border: 240 6% 15%;
+    --input: 240 6% 15%;
+    --ring: 210 100% 50%;
+
+    /* Border radius */
+    --radius: 0.75rem;
+
+    /* Custom developer theme colors */
+    --code: 47 96% 53%;
+    --code-foreground: 240 10% 3.9%;
+    
+    /* Experience levels */
+    --junior: 45 93% 47%;
+    --mid: 210 100% 50%;
+    --senior: 262 83% 58%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(142 76% 45%));
+    
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-glow: 0 0 20px hsl(var(--primary) / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Sidebar compatibility */
+    --sidebar-background: 240 10% 6%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 210 100% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 6% 10%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 6% 15%;
+    --sidebar-ring: 210 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  /* Custom utilities */
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+}
